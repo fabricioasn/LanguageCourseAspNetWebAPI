@@ -11,6 +11,8 @@ using Microsoft.OpenApi.Models;
 using LanguageCourseAPI.Data;
 using System.Linq;
 
+//Complete version of the Language Course school WebAPI
+
 namespace LanguageCourseAPI
 {
     public class Startup
