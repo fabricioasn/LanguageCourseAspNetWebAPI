@@ -22,25 +22,35 @@ namespace LanguageCourseAPI.Models
         [Column("Nome_Completo")]
         public string FullName { get; set; }
 
-        [MaxLength(100, ErrorMessage = "Este campo deve conter até 150 caracteres.")]        
+        [Required(ErrorMessage = "Este campo é obrigatório.")]
+        [StringLength(10, ErrorMessage = "Este campo deve conter exatamente 10 caracteres.")]
+        [DataType("varchar")]
+        [Column("Matricula")]
+        public string Enrollment { get; set; }
+
+        [MaxLength(150, ErrorMessage = "Este campo deve conter até 150 caracteres.")]        
         [DataType("varchar")]
         [Column("Endereco")]
         public string Address { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
         [DataType("Date")]
+        [StringLength(10, ErrorMessage = "Este campo deve conter 10 caracteres.")]
         [Column("Data_Nascimento")]
         public DateTime BirthDate { get; set; }
 
+        [StringLength(8, ErrorMessage = "Este campo deve conter 8 caracteres.")]
         [DataType("varchar")]
         [Column("Telefone")]
         public string Phone { get; set; }
 
+        [StringLength(9, ErrorMessage = "Este campo deve conter 9 caracteres.")]
         [DataType("varchar")]
         [Column("Identidade")]
         public string RG { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
+        [StringLength(11, ErrorMessage = "Este campo deve conter 11 caracteres.")]
         [DataType("varchar")]
         [Column("CPF")]
         public string CPF { get; set; }

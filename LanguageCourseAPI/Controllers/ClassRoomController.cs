@@ -115,6 +115,13 @@ namespace LanguageCourseAPI.Controllers
             }
             try
             {
+                // returns badRequest to deletion if the classroom transient have some student
+                if(classModel.Students != null)
+                {
+                    return BadRequest(new { message = "Não é permitido remover esta turma, " +
+                        "pois ela ainda possui alunos."
+                    });
+                }
                 _context.ClassRooms.Remove(classModel);
                 await _context.SaveChangesAsync();
 
