@@ -8,8 +8,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System;
 
+// https://localhost:5001/v1/estudante local address
+//student manipulation methods
+
 namespace LanguageCourseAPI.Controllers
 {
+    [Route("v1/estudante")]
     public class StudentController:ControllerBase
     {
         private readonly DataContextAPI _context;
@@ -33,16 +37,16 @@ namespace LanguageCourseAPI.Controllers
         [HttpGet]
         [Route("{id:int}")]
         [AllowAnonymous]
-        public async Task<ActionResult<Student>> GetProduct(int id)
+        public async Task<ActionResult<Student>> GetStudent(int id)
         {
             var student = await _context.Students.AsNoTracking().Where(p => p.ID == id).FirstOrDefaultAsync();
             return Ok(student);
         }
 
-        //read students as a list enumerable by category        
+        //read students as a list enumerable by class        
         [HttpGet]
         [Route("{id:int}")]
-        public async Task<ActionResult<IEnumerable<Student>>> GetProducts(int Id)
+        public async Task<ActionResult<IEnumerable<Student>>> GetStudents(int Id)
         {
             var students = await _context.Students.AsNoTracking().Where(p => p.ClassRoomID == Id).ToListAsync();
             return Ok(students);
@@ -52,7 +56,7 @@ namespace LanguageCourseAPI.Controllers
         [HttpPost]
         [Route("")]
         [Authorize(Roles = "employee")]
-        public async Task<ActionResult<Student>> PostProduct([FromBody] Student student)
+        public async Task<ActionResult<Student>> PostStudent([FromBody] Student student)
         {
             if (!ModelState.IsValid)
             {
@@ -72,11 +76,11 @@ namespace LanguageCourseAPI.Controllers
             }
         }
 
-        //update an existing product        
+        //update an existing student        
         [HttpPut]
         [Route("{id:int}")]
         [Authorize(Roles = "employee")]
-        public async Task<ActionResult<Student>> PutProduct(int id, [FromBody] Student student)
+        public async Task<ActionResult<Student>> PutStudent(int id, [FromBody] Student student)
         {
             if (id != student.ID)
             {
@@ -108,7 +112,7 @@ namespace LanguageCourseAPI.Controllers
         [Route("")]
         [Authorize(Roles = "employee")] //any employee role user can delete a student
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public async Task<ActionResult<Student>> DeleteProduct(int id)
+        public async Task<ActionResult<Student>> DeleteStudent(int id)
         {
             var student = await _context.Students.FirstOrDefaultAsync(c => c.ID == id);
             if (student == null)

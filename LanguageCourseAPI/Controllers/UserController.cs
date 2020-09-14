@@ -9,7 +9,8 @@ using LanguageCourseAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 
-// https://localhost:5001/v1/categories local address
+// https://localhost:5001/v1/usuario local address
+//user manipulation methods
 
 namespace LanguageCourseAPI.Controllers
 {

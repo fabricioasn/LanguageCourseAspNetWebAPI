@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 using System;
 using Microsoft.AspNetCore.Authorization;
 
-// https://localhost:5001/v1/categories local address
+// https://localhost:5001/v1/turma local address
+//class manipulation methods
 
 namespace LanguageCourseAPI.Controllers
 {

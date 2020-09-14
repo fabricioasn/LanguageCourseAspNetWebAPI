@@ -75,7 +75,7 @@ namespace LanguageCourseAPI
                 options.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "Shop API Documentation",
+                        Title = "Language Courses API Documentation",
                         Description = "This is the documentation of the API using swagger dependency " +
                     "wich generates an API for consumeble REST Web API",
                         Version = "V1"
@@ -101,7 +101,7 @@ namespace LanguageCourseAPI
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("swagger/v1/swagger.json", "Shop API V1 Documentation");
+                options.SwaggerEndpoint("swagger/v1/swagger.json", "Language Courses V1 Documentation");
             });
 
             //using Cross-Origin Resource Sharing
