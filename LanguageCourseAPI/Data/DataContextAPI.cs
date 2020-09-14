@@ -20,6 +20,11 @@ namespace LanguageCourseAPI.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new StudentMapping());
+            
+            //on creation defines enrollment as unique
+            builder.Entity<Student>()
+            .HasIndex(s => s.Enrollment)
+            .IsUnique();
 
         }
 

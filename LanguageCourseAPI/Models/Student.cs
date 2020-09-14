@@ -9,7 +9,7 @@ namespace LanguageCourseAPI.Models
 {
     [Table("tbl_Aluno")]
     public class Student
-    {        
+    {
         [Key]
         [Column("estudante_ID")]
         public int ID { get; set; }
@@ -21,6 +21,12 @@ namespace LanguageCourseAPI.Models
         [DataType("varchar")]
         [Column("Nome_Completo")]
         public string FullName { get; set; }
+
+        [Required(ErrorMessage = "Este campo é obrigatório.")]
+        [StringLength(10, ErrorMessage = "Este campo deve conter exatamente 10 caracteres.")]        
+        [DataType("varchar")]
+        [Column("Matricula")]
+        public string Enrollment { get; set; }
 
         [MaxLength(100, ErrorMessage = "Este campo deve conter até 150 caracteres.")]        
         [DataType("varchar")]
