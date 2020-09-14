@@ -9,7 +9,7 @@ namespace LanguageCourseAPI.Models
 {
     [Table("tbl_Aluno")]
     public class Student
-    {
+    {        
         [Key]
         [Column("estudante_ID")]
         public int ID { get; set; }
@@ -46,7 +46,10 @@ namespace LanguageCourseAPI.Models
         public string CPF { get; set; }
 
         //relationship of student with classroom declaration
+        [Required(ErrorMessage = "Este campo é obrigatório.")]
         public int ClassRoomID { get; set; }
+        //requited class relationship
+        [Required]
         public ClassRoom ClassRoom { get; set; }
 
     }

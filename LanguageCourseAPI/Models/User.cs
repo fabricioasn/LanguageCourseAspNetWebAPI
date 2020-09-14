@@ -17,13 +17,19 @@ namespace LanguageCourseAPI.Models
         [Required(ErrorMessage = "Este campo é obrigatório.")]
         [MaxLength(20, ErrorMessage = "Este campo deve conter entre 3 e 20 caracteres.")]
         [MinLength(3, ErrorMessage = "Este campo deve conter entre 3 e 20 caracteres.")]
+        [DataType("varchar")]
+        [Column("Usuario")]
         public string Username { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
         [MaxLength(20, ErrorMessage = "Este campo deve conter entre 3 e 20 caracteres.")]
         [MinLength(3, ErrorMessage = "Este campo deve conter entre 3 e 20 caracteres.")]
+        [DataType("varchar")]
+        [Column("Senha")]
         public string Password { get; set; }
 
+        [Column("Cargo")]
+        [DataType("varchar")]
         public string Role { get; set; }
     }
 }

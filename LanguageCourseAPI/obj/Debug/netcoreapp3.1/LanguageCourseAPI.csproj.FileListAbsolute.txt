@@ -60,9 +60,10 @@ C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\De
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Debug\netcoreapp3.1\LanguageCourseAPI.dll
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Debug\netcoreapp3.1\LanguageCourseAPI.pdb
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.csproj.CoreCompileInputs.cache
-C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.dll
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.pdb
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.genruntimeconfig.cache
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.csproj.CoreCompileInputs.cache
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Debug\netcoreapp3.1\LanguageCourseAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
