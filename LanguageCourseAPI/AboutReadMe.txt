@@ -1,0 +1,1 @@
+This repository stores a RESTful Web API made with asc.net core and EF core wich uses Jwt Bearer token for authentication and documents the API with Swashbuckle Swagger
