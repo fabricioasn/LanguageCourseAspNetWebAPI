@@ -6,7 +6,7 @@ This repository stores a RESTful Web API made with asc.net core and EF core wich
 *Use cases e Use Stories*
  . Criação da base de dados: Criar uma base de dados utilizando o SQL Server Management Studio com no mínimo as seguintes tabelas: Aluno, Turma e Usuário. Essa última para controlar o acesso feito pela API.
  . API em C#: A API deve utilizar a estrutura MVC utilizando Entity Data Model (.edmx) ou DDD utilizando Code First Mapping.
- Use story: Banco de dados criado via paragidma Code First Mapping utilizando EF Migrations para exportar o banco para o MSSQL SERVER EXPRESS,com mapeamento de tabelas, restri;óes e tipos
+ Use story: Banco de dados criado via paragidma Code First Mapping utilizando EF Migrations para exportar o banco para o MSSQL SERVER EXPRESS, com mapeamento de tabelas, restrições e tipos
   
  Os dados são manipulados utilizando o Entity Framework e a API possui os seguintes métodos:
 
