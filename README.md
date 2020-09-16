@@ -22,6 +22,14 @@ A comunicação com a API deve ser feita via Swagger.
 
 *Business Logic*
 ·   Aluno deve ser cadastrado com turma => builder.HasOne(turma).toMany(Alunos).IsRequired()
+PostStudents()
+{                if (student.ClassRoom == null)
+                {
+                    return BadRequest(new { message = "Não é possível criar um estudante" +
+                        " sem turma cadastrada."
+                    });
+                }
+}
 
 ·   Matrícula do aluno não pode ser repetida; => on configure { modelBuilder.Entity<Aluno>()
             .HasIndex(a => a.Matricula)
