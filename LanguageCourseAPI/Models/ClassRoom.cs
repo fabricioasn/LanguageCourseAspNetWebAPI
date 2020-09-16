@@ -18,14 +18,14 @@ namespace LanguageCourseAPI.Models
         [Required(ErrorMessage = "Este campo é obrigatório!")]
         [MaxLength(60, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
         [MinLength(3, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
-        [DataType("varchar")]
+        [DataType("varchar(60)")]
         //defines the colum name as "Idioma"
         [Column("Idioma")]
         public string Language { get; set; }
         
         [MaxLength(10, ErrorMessage = "Este campo deve conter entre 3 e 10 caracteres")]
         [MinLength(3, ErrorMessage = "Este campo deve conter entre 3 e 10 caracteres")]
-        [DataType("varchar")]
+        [DataType("varchar(30)")]
         [Column("Modulo")]
         public string Module { get; set; }
         public IEnumerable<Student> Students { get; set; }

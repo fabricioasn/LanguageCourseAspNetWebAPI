@@ -4,14 +4,16 @@ using LanguageCourseAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LanguageCourseAPI.Migrations
 {
     [DbContext(typeof(DataContextAPI))]
-    partial class DataContextAPIModelSnapshot : ModelSnapshot
+    [Migration("20200916041741_UserEnrollment")]
+    partial class UserEnrollment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,17 +55,17 @@ namespace LanguageCourseAPI.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnName("Endereco")
-                        .HasColumnType("varchar(150)")
+                        .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
                     b.Property<DateTime>("BirthDate")
                         .HasColumnName("Data_Nascimento")
-                        .HasColumnType("Date");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CPF")
                         .IsRequired()
                         .HasColumnName("CPF")
-                        .HasColumnType("char(11)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ClassRoomID")
                         .HasColumnType("int");
@@ -71,23 +73,22 @@ namespace LanguageCourseAPI.Migrations
                     b.Property<string>("Enrollment")
                         .IsRequired()
                         .HasColumnName("Matricula")
-                        .HasColumnType("char(10)")
+                        .HasColumnType("nvarchar(10)")
                         .HasMaxLength(10);
 
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnName("Nome_Completo")
-                        .HasColumnType("varchar(120)")
+                        .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
                     b.Property<string>("Phone")
                         .HasColumnName("Telefone")
-                        .HasColumnType("char(9)")
-                        .HasMaxLength(10);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RG")
                         .HasColumnName("Identidade")
-                        .HasColumnType("char(9)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 

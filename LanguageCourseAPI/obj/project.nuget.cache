@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z+8fR7T2NJHpNloGaZrb8T9+zUjeEYEm0IzdXWupsSenCsE5KKAPwskKxjeIS8u5kCdLGiuNlZmAdh2Mb5A9+w==",
+  "dgSpecHash": "yN22aB5VhP138xqzCUdLaK2QVy/y5IOM3jMjPypc8RBB2s8m6ZUlmbT/3ESKKoXeE/dhwtLxKOdKjGpneVvzkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fabricio\\Documents\\Visual Studio 2019\\Projects\\LanguageCourseAPI\\LanguageCourseAPI.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.entityframeworkcore.relational.design\\1.1.6\\microsoft.entityframeworkcore.relational.design.1.1.6.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.8\\microsoft.entityframeworkcore.sqlserver.3.1.8.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver.design\\1.1.6\\microsoft.entityframeworkcore.sqlserver.design.1.1.6.nupkg.sha512",
+    "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.8\\microsoft.entityframeworkcore.tools.3.1.8.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.8\\microsoft.extensions.caching.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\Fabricio\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.8\\microsoft.extensions.caching.memory.3.1.8.nupkg.sha512",

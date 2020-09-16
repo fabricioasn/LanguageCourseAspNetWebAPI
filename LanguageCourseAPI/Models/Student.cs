@@ -18,18 +18,18 @@ namespace LanguageCourseAPI.Models
         [Required(ErrorMessage = "Este campo é obrigatório.")]
         [MaxLength(100, ErrorMessage = "Este campo deve conter entre 10 e 100 caracteres.")]
         [MinLength(10, ErrorMessage = "Este campo deve conter entre 10 e 100 caracteres.")]
-        [DataType("varchar")]
+        [DataType("varchar(120)")]
         [Column("Nome_Completo")]
         public string FullName { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
         [StringLength(10, ErrorMessage = "Este campo deve conter exatamente 10 caracteres.")]        
-        [DataType("varchar")]
+        [DataType("char(10)")]
         [Column("Matricula")]
         public string Enrollment { get; set; }
 
         [MaxLength(100, ErrorMessage = "Este campo deve conter até 150 caracteres.")]        
-        [DataType("varchar")]
+        [DataType("varchar(150)")]
         [Column("Endereco")]
         public string Address { get; set; }
 
@@ -37,17 +37,18 @@ namespace LanguageCourseAPI.Models
         [DataType("Date")]
         [Column("Data_Nascimento")]
         public DateTime BirthDate { get; set; }
-
-        [DataType("varchar")]
+        
+        [StringLength(10, ErrorMessage = "Este campo deve conter exatamente 10 caracteres.")]
+        [DataType("char(10)")]
         [Column("Telefone")]
         public string Phone { get; set; }
 
-        [DataType("varchar")]
+        [DataType("char(9)")]
         [Column("Identidade")]
         public string RG { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório.")]
-        [DataType("varchar")]
+        [DataType("char(11)")]
         [Column("CPF")]
         public string CPF { get; set; }
 
