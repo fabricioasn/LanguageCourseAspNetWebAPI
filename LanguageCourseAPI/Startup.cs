@@ -76,8 +76,8 @@ namespace LanguageCourseAPI
                     new OpenApiInfo
                     {
                         Title = "Language Courses API Documentation",
-                        Description = "This is the documentation of the API using swagger dependency " +
-                    "wich generates an API for consumeble REST Web API",
+                        Description = "This is the documentation of a Web API for a Language Course School " +
+                        " using swagger dependency wich generates an API for consumeble REST Web API",
                         Version = "V1"
                     }); ;
             });

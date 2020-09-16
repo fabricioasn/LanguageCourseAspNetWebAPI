@@ -67,3 +67,8 @@ C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Re
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Release\netcoreapp3.1\LanguageCourseAPI.dll
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Release\netcoreapp3.1\LanguageCourseAPI.pdb
 C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\obj\Release\netcoreapp3.1\LanguageCourseAPI.genruntimeconfig.cache
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Release\netcoreapp3.1\ReleaseDeployment\web.config
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Release\netcoreapp3.1\ReleaseDeployment\appsettings.Development.json
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Release\netcoreapp3.1\ReleaseDeployment\appsettings.json
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Release\netcoreapp3.1\ReleaseDeployment\LanguageCourseAPI.deps.json
+C:\Users\Fabricio\Documents\Visual Studio 2019\Projects\LanguageCourseAPI\bin\Release\netcoreapp3.1\ReleaseDeployment\LanguageCourseAPI.runtimeconfig.json
