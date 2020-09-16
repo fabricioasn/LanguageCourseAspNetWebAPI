@@ -65,6 +65,12 @@ namespace LanguageCourseAPI.Controllers
 
             try
             {
+                if (student.ClassRoom == null)
+                {
+                    return BadRequest(new { message = "Não é possível criar um estudante" +
+                        " sem turma cadastrada."
+                    });
+                }
                 _context.Students.Add(student);
                 await _context.SaveChangesAsync();
 
