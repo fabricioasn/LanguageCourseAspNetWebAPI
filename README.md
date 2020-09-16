@@ -17,9 +17,34 @@ Enviar script SQL de Insert de pelo menos 1 registro em cada CRUD.
 
 Todos os métodos devem ser autorizados via token, a ser retornado no método de login.
 Use story: tokenização via JWT Bearer
-
+            var key = System.Text.Encoding.ASCII.GetBytes(Settings.Secret);
+            services.AddAuthentication(a =>
+            {
+                a.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                a.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(jwt =>
+            {
+                jwt.RequireHttpsMetadata = false;
+                jwt.SaveToken = true;
+                jwt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
 A comunicação com a API deve ser feita via Swagger.
-
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "Language Courses API Documentation",
+                        Description = "This is the documentation of the API using swagger dependency " +
+                    "wich generates an API for consumeble REST Web API",
+                        Version = "V1"
+                    }); ;
+            });
 *Business Logic*
 ·   Aluno deve ser cadastrado com turma => builder.HasOne(turma).toMany(Alunos).IsRequired()
 PostStudents()
@@ -33,7 +58,7 @@ PostStudents()
 
 ·   Matrícula do aluno não pode ser repetida; => on configure { modelBuilder.Entity<Aluno>()
             .HasIndex(a => a.Matricula)
-            .IsUnique();
+            .IsUnique(); }
 
 ·  Turma não pode ser excluída se possuir alunos =>                 if (classModel.Students != null)
                 {
