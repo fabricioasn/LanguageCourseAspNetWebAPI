@@ -45,7 +45,7 @@ namespace LanguageCourseAPI.Controllers
 
         //read students as a list enumerable by class        
         [HttpGet]
-        [Route("{id:int}")]
+        [Route("{Id:int}")]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents(int Id)
         {
             var students = await _context.Students.AsNoTracking().Where(p => p.ClassRoomID == Id).ToListAsync();
