@@ -4,14 +4,16 @@ using LanguageCourseAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LanguageCourseAPI.Migrations
 {
     [DbContext(typeof(DataContextAPI))]
-    partial class DataContextAPIModelSnapshot : ModelSnapshot
+    [Migration("20200918010456_ClassNewCollums")]
+    partial class ClassNewCollums
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,25 +32,25 @@ namespace LanguageCourseAPI.Migrations
                     b.Property<string>("Language")
                         .IsRequired()
                         .HasColumnName("Idioma")
-                        .HasColumnType("varchar(60)")
+                        .HasColumnType("nvarchar(60)")
                         .HasMaxLength(60);
 
                     b.Property<string>("Module")
                         .IsRequired()
                         .HasColumnName("Modulo")
-                        .HasColumnType("varchar(20)")
-                        .HasMaxLength(20);
-
-                    b.Property<string>("Shift")
-                        .HasColumnName("Turno")
-                        .HasColumnType("varchar(60)")
-                        .HasMaxLength(20);
+                        .HasColumnType("nvarchar(10)")
+                        .HasMaxLength(10);
 
                     b.Property<string>("TeachingMethodology")
                         .IsRequired()
                         .HasColumnName("MetodologiaDeEnsino")
-                        .HasColumnType("varchar(200)")
+                        .HasColumnType("nvarchar(200)")
                         .HasMaxLength(200);
+
+                    b.Property<string>("shift")
+                        .HasColumnName("Turno")
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.HasKey("Id");
 

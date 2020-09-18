@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LanguageCourseAPI.Migrations
 {
     [DbContext(typeof(DataContextAPI))]
-    [Migration("20200914055814_UserEnrollmentAddition")]
-    partial class UserEnrollmentAddition
+    [Migration("20200918020103_ClassRoomTunningMapped")]
+    partial class ClassRoomTunningMapped
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,9 +36,21 @@ namespace LanguageCourseAPI.Migrations
                         .HasMaxLength(60);
 
                     b.Property<string>("Module")
+                        .IsRequired()
                         .HasColumnName("Modulo")
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
+
+                    b.Property<string>("Shift")
+                        .HasColumnName("Turno")
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
+
+                    b.Property<string>("TeachingMethodology")
+                        .IsRequired()
+                        .HasColumnName("MetodologiaDeEnsino")
+                        .HasColumnType("nvarchar(200)")
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
 
@@ -55,17 +67,17 @@ namespace LanguageCourseAPI.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnName("Endereco")
-                        .HasColumnType("nvarchar(100)")
+                        .HasColumnType("varchar(150)")
                         .HasMaxLength(100);
 
                     b.Property<DateTime>("BirthDate")
                         .HasColumnName("Data_Nascimento")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("Date");
 
                     b.Property<string>("CPF")
                         .IsRequired()
                         .HasColumnName("CPF")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("char(11)");
 
                     b.Property<int>("ClassRoomID")
                         .HasColumnType("int");
@@ -73,22 +85,23 @@ namespace LanguageCourseAPI.Migrations
                     b.Property<string>("Enrollment")
                         .IsRequired()
                         .HasColumnName("Matricula")
-                        .HasColumnType("nvarchar(10)")
+                        .HasColumnType("char(10)")
                         .HasMaxLength(10);
 
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnName("Nome_Completo")
-                        .HasColumnType("nvarchar(100)")
+                        .HasColumnType("varchar(120)")
                         .HasMaxLength(100);
 
                     b.Property<string>("Phone")
                         .HasColumnName("Telefone")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("char(9)")
+                        .HasMaxLength(10);
 
                     b.Property<string>("RG")
                         .HasColumnName("Identidade")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("char(9)");
 
                     b.HasKey("ID");
 

@@ -19,6 +19,8 @@ namespace LanguageCourseAPI.Data
         //applies the ORM relationship configuration in migration time for db Creation
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            //ORM configuring application
+            builder.ApplyConfiguration(new ClassMapping());
             builder.ApplyConfiguration(new StudentMapping());
             
             //on creation defines enrollment as unique
